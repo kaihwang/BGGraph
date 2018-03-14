@@ -51,3 +51,7 @@ mean_matrix[np.isnan(mean_matrix)]=0
 CI, _ = bct.modularity_louvain_und_sign(mean_matrix, qtype='sta')
 meanQ = np.mean(qs)
 
+
+np.save('144_Modular_Partition', CI)
+
+np.save('144_meanQ', meanQ)
