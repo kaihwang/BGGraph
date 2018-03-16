@@ -70,22 +70,22 @@ mean_right_matrix[np.isnan(mean_right_matrix)]=0
 CI, _ = bct.modularity_louvain_und_sign(mean_matrix, qtype='sta')
 meanQ = np.mean(qs)
 
-LCI, _ = bct.modularity_louvain_und_sign(left_mean_matrix, qtype='sta')
+LCI, _ = bct.modularity_louvain_und_sign(mean_left_matrix, qtype='sta')
 LmeanQ = np.mean(left_qs)
 
-RCI, _ = bct.modularity_louvain_und_sign(right_mean_matrix, qtype='sta')
+RCI, _ = bct.modularity_louvain_und_sign(mean_right_matrix, qtype='sta')
 RmeanQ = np.mean(right_qs)
 
 
 
-np.save('144_Modular_Partition', CI)
-np.save('144_meanQ', meanQ)
+np.save('144_run1_Modular_Partition', CI)
+np.save('144_run1_meanQ', meanQ)
 
-np.save('144_Modular_Partition_Left', LCI)
-np.save('144_meanQ_Left', LmeanQ)
+np.save('144_run1_Modular_Partition_Left', LCI)
+np.save('144_run1_meanQ_Left', LmeanQ)
 
-np.save('144_Modular_Partition_Right', RCI)
-np.save('144_meanQ_Right', RmeanQ)
+np.save('144_run1_Modular_Partition_Right', RCI)
+np.save('144_run1_meanQ_Right', RmeanQ)
 
 
 
